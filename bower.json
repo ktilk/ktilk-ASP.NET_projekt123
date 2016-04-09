@@ -1,0 +1,25 @@
+{
+  "name": "ktilk-ASP.NET_projekt12-master",
+  "authors": [
+    "Kaspar Tilk <ktilk@itcollege.ee>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Web/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.12.0",
+    "globalize": "^1.1.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "bootstrap": "^3.3.6",
+    "respond": "^1.4.2"
+  }
+}
