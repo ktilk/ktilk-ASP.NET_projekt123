@@ -25,9 +25,13 @@
                 </a>
                 <ul class="dropdown-menu">
                     @*<li>@Html.ActionLink(@Resources.Common.ManageAccount, "Index", new { area = "", controller = "Manage" })</li>*@
-                    <li>
+                    @*<li>
                         <a href="javascript:document.getElementById('logoutForm').submit()">@Resources.Common.LogOff</a>
+                    </li>*@
+                    <li>
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
                     </li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                 </ul>
             </li>
             <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">

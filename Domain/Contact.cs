@@ -12,14 +12,14 @@ namespace Domain
         public int ContactID { get; set; }
 
         [Required]
-        [MaxLength(128, ErrorMessageResourceName = "ContactValueLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
-        [MinLength(1, ErrorMessageResourceName = "ContactValueLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
-        public string Value { get; set; }
-
-        public int ContactTypeID { get; set; }
-        public virtual ContactType ContactType { get; set; }
+        [MaxLength(128, ErrorMessageResourceName = nameof(Resources.Domain.ContactValueLengthError), ErrorMessageResourceType = typeof(Resources.Domain))]
+        [MinLength(1, ErrorMessageResourceName = nameof(Resources.Domain.ContactValueLengthError), ErrorMessageResourceType = typeof(Resources.Domain))]
+        public string ContactValue { get; set; }
 
         public int PersonID { get; set; }
-        public virtual Person Person { get; set; }
+        public Person Person { get; set; }
+
+        public int ContactTypeID { get; set; }
+        public ContactType ContactType { get; set; }
     }
 }
