@@ -229,6 +229,7 @@
     <Compile Include="Controllers\ExercisesController.cs" />
     <Compile Include="Controllers\ExerciseTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ParticipationsController.cs" />
     <Compile Include="Controllers\PersonsController.cs" />
@@ -238,6 +239,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CultureHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -1522,6 +1524,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
