@@ -35,19 +35,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.PlanDescription)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.PlanDescription)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Instructions)
+            @Html.DisplayNameFor(model => model.PlanInstructions)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Instructions)
+            @Html.DisplayFor(model => model.PlanInstructions)
         </dd>
 
         <dt>
@@ -75,16 +75,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PersonID)
+            @Html.DisplayNameFor(model => model.People)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PersonID)
+            @Html.DisplayFor(model => model.People)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PlanID }) |
+    @Html.ActionLink(@Resources.Common.Edit, "Edit", new { id = Model.PlanID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

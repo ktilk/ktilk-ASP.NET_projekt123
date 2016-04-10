@@ -24,14 +24,10 @@
                     @User.Identity.GetUserName() <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    @*<li>@Html.ActionLink(@Resources.Common.ManageAccount, "Index", new { area = "", controller = "Manage" })</li>*@
-                    @*<li>
-                        <a href="javascript:document.getElementById('logoutForm').submit()">@Resources.Common.LogOff</a>
-                    </li>*@
+                    <li>@Html.ActionLink(Resources.Common.ManageAccount, "Index", new { area = "", controller = "Manage" })</li>
                     <li>
-                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                        <a href="javascript:document.getElementById('logoutForm').submit()">@Resources.Common.LogOff</a>
                     </li>
-                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                 </ul>
             </li>
             <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
@@ -46,11 +42,14 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink(Resources.Common.Login, "Login", new { area = "", controller = "Account" }, htmlAttributes: new { id = "loginLink" }) 
+        </li>
         <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
-            @Html.ActionLink("Est", "SetLanguage", new { area = "", controller = "Language", culture = "et", returnUrl }, htmlAttributes: new { id = "langLinkEst" })
+            @Html.ActionLink("Est", "SetLanguage", new {area = "", controller = "Language", culture = "et", returnUrl}, htmlAttributes: new {id = "langLinkEst"})
         </li>
         <li class="@Html.Raw(culture == "en" ? "list-group-item-success" : "")">
-            @Html.ActionLink("Eng", "SetLanguage", new { area = "", controller = "Language", culture = "en", returnUrl }, htmlAttributes: new { id = "langLinkEng" })
+            @Html.ActionLink("Eng", "SetLanguage", new {area = "", controller = "Language", culture = "en", returnUrl}, htmlAttributes: new {id = "langLinkEng"})
         </li>
     </ul>
 }

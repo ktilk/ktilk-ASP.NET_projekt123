@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(Resources.Common.CreateNew, "Create")
 </p>
 <table class="table">
     <tr>
@@ -59,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.DateCreated)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ExerciseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ExerciseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ExerciseID })
+            @Html.ActionLink(@Resources.Common.Edit, "Edit", new { id=item.ExerciseID }) |
+            @Html.ActionLink(@Resources.Common.Details, "Details", new { id=item.ExerciseID }) |
+            @Html.ActionLink(@Resources.Common.Delete, "Delete", new { id=item.ExerciseID })
         </td>
     </tr>
 }

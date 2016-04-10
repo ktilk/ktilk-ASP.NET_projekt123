@@ -1,7 +1,7 @@
 ﻿@using System
 @using System.Threading
 @{
-    //var titleTag = (string.IsNullOrWhiteSpace(ViewBag.Title) ? "" : ViewBag.Title + " - ") + Resources.Common.ApplicationName;
+    var titleTag = (string.IsNullOrWhiteSpace(ViewBag.Title) ? "" : ViewBag.Title + " - ") + Resources.Common.ApplicationName;
 
     // set up global js variable, to hold culture code
     // it is later used for globalize, cldr and moment
@@ -43,30 +43,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("KT Gym App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(Resources.Common.ApplicationName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Persons", "Index", "Persons")</li>
-                    <li>@Html.ActionLink("Contacts", "Index", "Contacts")</li>
-                    <li>@Html.ActionLink("Competitions", "Index", "Competitions")</li>
-                    <li>@Html.ActionLink("Exercises", "Index", "Exercises")</li>
-                    <li>@Html.ActionLink("Participations", "Index", "Participations")</li>
-                    <li>@Html.ActionLink("Plans", "Index", "Plans")</li>
-                    <li>@Html.ActionLink("Workouts", "Index", "Workouts")</li>
+                    <li>@Html.ActionLink(Resources.Common.Home, "Index", "Home")</li>
+                    <li>@Html.ActionLink(Resources.Common.People, "Index", "Persons")</li>
+                    <li>@Html.ActionLink(Resources.Common.Contacts, "Index", "Contacts")</li>
+                    <li>@Html.ActionLink(Resources.Common.Home, "Index", "Competitions")</li>
+                    <li>@Html.ActionLink(Resources.Common.Exercises, "Index", "Exercises")</li>
+                    <li>@Html.ActionLink(Resources.Common.Participations, "Index", "Participations")</li>
+                    <li>@Html.ActionLink(Resources.Common.Plans, "Index", "Plans")</li>
+                    <li>@Html.ActionLink(Resources.Common.Workouts, "Index", "Workouts")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
-                @*<div class="g-signin2" data-onsuccess="onSignIn"></div>
-                <a href="#" onclick="signOut();">Sign out</a>
-                <script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-                </script>*@
             </div>
         </div>
     </div>

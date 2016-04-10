@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(Resources.Common.CreateNew, "Create")
 </p>
 <table class="table">
     <tr>
@@ -21,10 +21,10 @@
             @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.PlanDescription)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Instructions)
+            @Html.DisplayNameFor(model => model.PlanInstructions)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateCreated)
@@ -53,10 +53,10 @@
             @Html.DisplayFor(modelItem => item.Rating)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @item.PlanDescription.Translate()
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Instructions)
+            @item.PlanInstructions.Translate()
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DateCreated)
@@ -71,9 +71,9 @@
             @Html.DisplayFor(modelItem => item.People)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PlanID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PlanID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PlanID })
+            @Html.ActionLink(@Resources.Common.Edit, "Edit", new { id=item.PlanID }) |
+            @Html.ActionLink(@Resources.Common.Details, "Details", new { id=item.PlanID }) |
+            @Html.ActionLink(@Resources.Common.Delete, "Delete", new { id=item.PlanID })
         </td>
     </tr>
 }

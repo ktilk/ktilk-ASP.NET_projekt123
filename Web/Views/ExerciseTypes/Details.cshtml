@@ -19,16 +19,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.ExerciseTypeDescription)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.ExerciseTypeDescription)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ExerciseTypeID }) |
+    @Html.ActionLink(@Resources.Common.Edit, "Edit", new { id = Model.ExerciseTypeID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
