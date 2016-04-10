@@ -9,7 +9,6 @@ namespace Domain
 {
     public class Person
     {
-        //TODO stringide pikkused piirata ja värki
         public int PersonID { get; set; }
         [Required]
         [MaxLength(128, ErrorMessageResourceName = "FirstNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
@@ -29,8 +28,10 @@ namespace Domain
         public DateTime? DateCreated { get; set; }
         [DataType(DataType.Time)]
         public DateTime Time { get; set; }
+
         public virtual List<Contact> Contacts { get; set; }
-        public virtual List<Plan> Plans { get; set; }
+        public virtual List<PersonInPlan> PersonInPlans { get; set; }
+        public virtual List<Plan> CreatorInPlans { get; set; }
         public virtual List<Participation> Participations { get; set; }
     }
 }

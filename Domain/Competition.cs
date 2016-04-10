@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,10 @@ namespace Domain
 
         [DataType(DataType.DateTime)]
         public DateTime? DateEnd { get; set; }
+
+        [ForeignKey(nameof(CompetitionDescription))]
+        public int CompetitionDescriptionID { get; set; }
+        public virtual MultiLangString CompetitionDescription { get; set; }
 
         public virtual List<Participation> Participations { get; set; }
     }

@@ -14,15 +14,15 @@ namespace Domain
         [Display(ResourceType = typeof(Resources.Domain), Name = "EntityPrimaryKey")]
         public int ExerciseTypeID { get; set; }
 
-        public string ExerciseTypeName { get; set; }
-        public string Description { get; set; }
-        //[ForeignKey(nameof(ExerciseTypeName))]
-        //public int ExerciseTypeNameID { get; set; }
-        //public virtual MultiLangString ExerciseTypeName { get; set; }
+        //public string ExerciseTypeName { get; set; }
+        //public string Description { get; set; }
+        [ForeignKey(nameof(ExerciseTypeName))]
+        public int? ExerciseTypeNameID { get; set; }
+        public virtual MultiLangString ExerciseTypeName { get; set; }
 
-        //[ForeignKey(nameof(ExerciseTypeDescription))]
-        //public int ExerciseTypeDescriptionID { get; set; }
-        //public virtual MultiLangString ExerciseTypeDescription { get; set; }
+        [ForeignKey(nameof(ExerciseTypeDescription))]
+        public int? ExerciseTypeDescriptionID { get; set; }
+        public virtual MultiLangString ExerciseTypeDescription { get; set; }
 
         public virtual List<Exercise> Exercises { get; set; }
     }

@@ -51,6 +51,8 @@ namespace DAL.Helpers
                 {typeof (IPlanTypeRepository), dbContext => new PlanTypeRepository(dbContext)},
                 {typeof (IWorkoutRepository), dbContext => new WorkoutRepository(dbContext)},
                 {typeof (IContactTypeRepository), dbContext => new ContactTypeRepository(dbContext)},
+                {typeof (IPersonInPlanRepository), dbContext => new PersonInPlanRepository(dbContext)},
+                {typeof (IPersonRoleInPlanRepository), dbContext => new PersonRoleInPlanRepository(dbContext)},
                 //{typeof (IUserIntRepository), dbContext => new UserIntRepository(dbContext)},
                 //{typeof (IUserRoleIntRepository), dbContext => new UserRoleIntRepository(dbContext)},
                 //{typeof (IUserClaimIntRepository), dbContext => new UserClaimIntRepository(dbContext)},

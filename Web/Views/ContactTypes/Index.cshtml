@@ -12,15 +12,26 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ContactTypeName)
+            @Html.DisplayNameFor(model => model.ContactTypeName.MultiLangStringID)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactTypeName.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactTypeName.Owner)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ContactTypeName)
+            @Html.DisplayFor(modelItem => item.ContactTypeName.MultiLangStringID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactTypeName.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactTypeName.Owner)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ContactTypeID }) |

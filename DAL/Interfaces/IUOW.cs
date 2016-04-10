@@ -20,9 +20,9 @@ namespace DAL.Interfaces
 
         // standard autocreated repos, since we do not have any special methods in interfaces
         //IEFRepository<ContactType> ContactTypes { get; }
-        //IEFRepository<MultiLangString> MultiLangStrings { get; }
-        //IEFRepository<Translation> Translations { get; }
 
+        IEFRepository<MultiLangString> MultiLangStrings { get; }
+        IEFRepository<Translation> Translations { get; }
 
         IPersonRepository Persons { get; }
         IContactRepository Contacts { get; }
@@ -35,8 +35,8 @@ namespace DAL.Interfaces
         IPlanTypeRepository PlanTypes { get; }
         IPlanRepository Plans { get; }
         IWorkoutRepository Workouts { get; }
-
-
+        IPersonInPlanRepository PersonInPlans { get; }
+        IPersonRoleInPlanRepository PersonRoleInPlans { get; }
 
         // Identity, PK - string
         //IUserRepository Users { get; }

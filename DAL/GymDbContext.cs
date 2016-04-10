@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,8 @@ namespace DAL
         public IDbSet<Plan> Plans { get; set; }
         public IDbSet<PlanType> PlanTypes { get; set; }
         public IDbSet<Workout> Workouts { get; set; }
+        public IDbSet<PersonInPlan> PeopleInPlans { get; set; }
+        public IDbSet<PersonRoleInPlan> PersonRolesInPlans { get; set; }
 
         // Identity tables, PK - int
         //public IDbSet<RoleInt> RolesInt { get; set; }
@@ -44,6 +47,9 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //remove all cascade deletes
+            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
             // convert all datetime and datetime? properties to datetime2 in ms sql
             // ms sql datetime has min value of 1753-01-01 00:00:00.000
             modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
@@ -53,7 +59,7 @@ namespace DAL
         .Where(x => x.GetCustomAttributes(false).OfType<DataTypeAttribute>()
         .Any(a => a.DataType == DataType.Date))
         .Configure(c => c.HasColumnType("date"));
-        }
 
+        }
     }
 }

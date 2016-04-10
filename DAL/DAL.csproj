@@ -60,40 +60,34 @@
     <Compile Include="GymDbContext.cs" />
     <Compile Include="Helpers\EFRepositoryProvider.cs" />
     <Compile Include="Helpers\EFRepositoryFactories.cs" />
-    <Compile Include="Migrations\201604091308245_migratsioon2.cs" />
-    <Compile Include="Migrations\201604091308245_migratsioon2.Designer.cs">
-      <DependentUpon>201604091308245_migratsioon2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604091449121_migratsioon3.cs" />
-    <Compile Include="Migrations\201604091449121_migratsioon3.Designer.cs">
-      <DependentUpon>201604091449121_migratsioon3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604092105157_migratsioon4.cs" />
-    <Compile Include="Migrations\201604092105157_migratsioon4.Designer.cs">
-      <DependentUpon>201604092105157_migratsioon4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Interfaces\IEFRepositoryProvider.cs" />
-    <Compile Include="Migrations\Interfaces\ICompetitionRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IContactRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IContactTypeRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IDbContext.cs" />
-    <Compile Include="Migrations\Interfaces\IExerciseTypeRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IEFRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IExerciseInWorkoutRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IExerciseRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IParticipationRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IPersonRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IPlanRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IPlanTypeRepository.cs" />
-    <Compile Include="Migrations\Interfaces\IUOW.cs" />
-    <Compile Include="Migrations\Interfaces\IWorkoutRepository.cs" />
+    <Compile Include="Interfaces\IPersonInPlanRepository.cs" />
+    <Compile Include="Interfaces\IPersonRoleInPlanRepository.cs" />
+    <Compile Include="Interfaces\IEFRepositoryProvider.cs" />
+    <Compile Include="Interfaces\ICompetitionRepository.cs" />
+    <Compile Include="Interfaces\IContactRepository.cs" />
+    <Compile Include="Interfaces\IContactTypeRepository.cs" />
+    <Compile Include="Interfaces\IDbContext.cs" />
+    <Compile Include="Interfaces\IExerciseTypeRepository.cs" />
+    <Compile Include="Interfaces\IEFRepository.cs" />
+    <Compile Include="Interfaces\IExerciseInWorkoutRepository.cs" />
+    <Compile Include="Interfaces\IExerciseRepository.cs" />
+    <Compile Include="Interfaces\IParticipationRepository.cs" />
+    <Compile Include="Interfaces\IPersonRepository.cs" />
+    <Compile Include="Interfaces\IPlanRepository.cs" />
+    <Compile Include="Interfaces\IPlanTypeRepository.cs" />
+    <Compile Include="Interfaces\IUOW.cs" />
+    <Compile Include="Interfaces\IWorkoutRepository.cs" />
     <Compile Include="Migrations\201603021044323_InitialMigration.cs" />
     <Compile Include="Migrations\201603021044323_InitialMigration.Designer.cs">
       <DependentUpon>201603021044323_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604061831139_migratsioon1.cs" />
-    <Compile Include="Migrations\201604061831139_migratsioon1.Designer.cs">
-      <DependentUpon>201604061831139_migratsioon1.cs</DependentUpon>
+    <Compile Include="Migrations\201604101115284_migratsioon1.cs" />
+    <Compile Include="Migrations\201604101115284_migratsioon1.Designer.cs">
+      <DependentUpon>201604101115284_migratsioon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604101149208_migratsioon2.cs" />
+    <Compile Include="Migrations\201604101149208_migratsioon2.Designer.cs">
+      <DependentUpon>201604101149208_migratsioon2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MigrationConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,7 +99,9 @@
     <Compile Include="Repositories\ExerciseRepository.cs" />
     <Compile Include="Repositories\ExerciseTypeRepository.cs" />
     <Compile Include="Repositories\ParticipationRepository.cs" />
+    <Compile Include="Repositories\PersonInPlanRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
+    <Compile Include="Repositories\PersonRoleInPlanRepository.cs" />
     <Compile Include="Repositories\PlanRepository.cs" />
     <Compile Include="Repositories\PlanTypeRepository.cs" />
     <Compile Include="Repositories\WorkoutRepository.cs" />
@@ -131,17 +127,11 @@
       <DependentUpon>201603021044323_InitialMigration.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604061831139_migratsioon1.resx">
-      <DependentUpon>201604061831139_migratsioon1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604101115284_migratsioon1.resx">
+      <DependentUpon>201604101115284_migratsioon1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604091308245_migratsioon2.resx">
-      <DependentUpon>201604091308245_migratsioon2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604091449121_migratsioon3.resx">
-      <DependentUpon>201604091449121_migratsioon3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604092105157_migratsioon4.resx">
-      <DependentUpon>201604092105157_migratsioon4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604101149208_migratsioon2.resx">
+      <DependentUpon>201604101149208_migratsioon2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
