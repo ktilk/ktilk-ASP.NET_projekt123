@@ -14,8 +14,6 @@ namespace Domain
         [Display(ResourceType = typeof(Resources.Domain), Name = "EntityPrimaryKey")]
         public int ExerciseTypeID { get; set; }
 
-        //public string ExerciseTypeName { get; set; }
-        //public string Description { get; set; }
         [ForeignKey(nameof(ExerciseTypeName))]
         public int? ExerciseTypeNameID { get; set; }
         public virtual MultiLangString ExerciseTypeName { get; set; }

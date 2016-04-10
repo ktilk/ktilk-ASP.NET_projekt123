@@ -1,10 +1,6 @@
-﻿@using System
-@using System.Threading
+﻿@using System.Threading
 @{
-    var titleTag = (string.IsNullOrWhiteSpace(ViewBag.Title) ? "" : ViewBag.Title + " - ") + Resources.Common.ApplicationName;
-
-    // set up global js variable, to hold culture code
-    // it is later used for globalize, cldr and moment
+    // set up global js variable, to hold culture code
     var currentCultureCode = "root";
     switch (Thread.CurrentThread.CurrentCulture.ToString())
     {
@@ -22,18 +18,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    @*<script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="992178576384-afdl60lk4nsappemghu9k07mh9gqm139.apps.googleusercontent.com">*@
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript">
-        var currentCultureCode = '@currentCultureCode';
+        var currentCultureCode = '@currentCultureCode';
     </script>
-
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">

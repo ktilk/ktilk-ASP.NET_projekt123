@@ -20,12 +20,10 @@ namespace Domain
 
         public int? Rating { get; set; }
 
-        //public string Description { get; set; }
         [ForeignKey(nameof(PlanDescription))]
         public int? PlanDescriptionID { get; set; }
         public virtual MultiLangString PlanDescription { get; set; }
 
-        //public string Instructions { get; set; }
         [ForeignKey(nameof(PlanInstructions))]
         public int? PlanInstructionsID { get; set; }
         public virtual MultiLangString PlanInstructions { get; set; }
@@ -33,8 +31,10 @@ namespace Domain
         public int PlanTypeID { get; set; }
         public virtual PlanType PlanType { get; set; }
 
+        [DataType(DataType.DateTime)]
         public DateTime DateCreated { get; set; }
 
+        [DataType(DataType.DateTime)]
         public DateTime? DateClosed { get; set; }
 
         public string Duration { get; set; }

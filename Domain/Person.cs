@@ -10,23 +10,37 @@ namespace Domain
     public class Person
     {
         public int PersonID { get; set; }
+
         [Required]
         [MaxLength(128, ErrorMessageResourceName = "FirstNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
         [MinLength(1, ErrorMessageResourceName = "FirstNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
+        [Display(Name = "Firstname", ResourceType = typeof(Resources.Domain))]
         public string FirstName { get; set; }
+
         [Required]
         [MaxLength(128, ErrorMessageResourceName = "LastNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
         [MinLength(1, ErrorMessageResourceName = "LastNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
+        [Display(Name = "Firstname", ResourceType = typeof(Resources.Domain))]
         public string LastName { get; set; }
+
         [Range(0, 2048, ErrorMessageResourceName = "HeightOutOfBoundsError", ErrorMessageResourceType = typeof(Resources.Domain))]
+        [Display(Name = "Height", ResourceType = typeof(Resources.Domain))]
         public int? Height { get; set; }
+
         [Range(0, 2048, ErrorMessageResourceName = "WeightOutOfBoundsError", ErrorMessageResourceType = typeof(Resources.Domain))]
+        [Display(Name = "Weight", ResourceType = typeof(Resources.Domain))]
         public int? Weight { get; set; }
+
         [DataType(DataType.Date)]
+        [Display(Name = "BirthDate", ResourceType = typeof(Resources.Domain))]
         public DateTime BirthDate { get; set; }
+
         [DataType(DataType.DateTime)]
+        [Display(Name = "DateCreated", ResourceType = typeof(Resources.Domain))]
         public DateTime? DateCreated { get; set; }
+
         [DataType(DataType.Time)]
+        [Display(Name = "Time", ResourceType = typeof(Resources.Domain))]
         public DateTime Time { get; set; }
 
         public virtual List<Contact> Contacts { get; set; }

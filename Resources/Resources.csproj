@@ -64,6 +64,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Domain.resx</DependentUpon>
     </Compile>
+    <Compile Include="Domain.et.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Domain.et.resx</DependentUpon>
+    </Compile>
     <Compile Include="Manage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +94,10 @@
     <EmbeddedResource Include="Common.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Domain.et.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Domain.et.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Domain.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

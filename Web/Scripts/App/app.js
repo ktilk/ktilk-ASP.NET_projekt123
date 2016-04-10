@@ -10,12 +10,12 @@ $.when(
     $.get("/bower_components/cldr-data/supplemental/timeData.json"),
     $.get("/bower_components/cldr-data/supplemental/weekData.json")
 ).then(function () {
-    // Normalize $.get results, we only need the JSON, not the request statuses.
+    // Normalize $.get results, we only need the JSON, not the request statuses.
     return [].slice.apply(arguments, [0]).map(function (result) {
         return result[0];
     });
 }).then(Globalize.load).then(function () {
-    // Initialise Globalize to the current UI culture
+    // Initialise Globalize to the current UI culture
     Globalize.locale(currentCultureCode);
     moment.locale(currentCultureCode);
 });

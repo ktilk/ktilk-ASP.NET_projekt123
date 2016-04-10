@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Birthdate.
+        /// </summary>
+        public static string BirthDate {
+            get {
+                return ResourceManager.GetString("BirthDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Competition name length is incorrect..
         /// </summary>
         public static string CompetitionNameLengthError {
@@ -84,6 +93,15 @@ namespace Resources {
         public static string ContactValueLengthError {
             get {
                 return ResourceManager.GetString("ContactValueLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of creation.
+        /// </summary>
+        public static string DateCreated {
+            get {
+                return ResourceManager.GetString("DateCreated", resourceCulture);
             }
         }
         
@@ -129,6 +147,15 @@ namespace Resources {
         public static string FirstNameLengthError {
             get {
                 return ResourceManager.GetString("FirstNameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        public static string Height {
+            get {
+                return ResourceManager.GetString("Height", resourceCulture);
             }
         }
         
@@ -205,11 +232,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string VideoURLLengthError {
             get {
                 return ResourceManager.GetString("VideoURLLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        public static string Weight {
+            get {
+                return ResourceManager.GetString("Weight", resourceCulture);
             }
         }
         

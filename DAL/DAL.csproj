@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201604101149208_migratsioon2.Designer.cs">
       <DependentUpon>201604101149208_migratsioon2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604101803238_migratsioon3.cs" />
+    <Compile Include="Migrations\201604101803238_migratsioon3.Designer.cs">
+      <DependentUpon>201604101803238_migratsioon3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MigrationConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CompetitionRepository.cs" />
@@ -132,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604101149208_migratsioon2.resx">
       <DependentUpon>201604101149208_migratsioon2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604101803238_migratsioon3.resx">
+      <DependentUpon>201604101803238_migratsioon3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
