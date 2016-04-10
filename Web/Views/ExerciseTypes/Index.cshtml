@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.ExerciseTypeName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.ExerciseTypeDescription)
         </th>
         <th></th>
     </tr>
@@ -23,10 +23,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ExerciseTypeName)
+            @item.ExerciseTypeName.Translate()
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @item.ExerciseTypeDescription.Translate()
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ExerciseTypeID }) |

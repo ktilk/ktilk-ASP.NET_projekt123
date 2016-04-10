@@ -13,7 +13,7 @@ using Domain;
 
 namespace Web.Controllers
 {
-    public class ExerciseTypesController : Controller
+    public class ExerciseTypesController : BaseController
     {
         private readonly IUOW _uow;
 

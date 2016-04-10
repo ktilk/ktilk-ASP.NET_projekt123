@@ -13,7 +13,7 @@ using Domain;
 
 namespace Web.Controllers
 {
-    public class PersonsController : Controller
+    public class PersonsController : BaseController
     {
         //private GymDbContext db = new GymDbContext();
 

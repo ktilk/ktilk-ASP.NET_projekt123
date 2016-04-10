@@ -14,7 +14,7 @@ using Domain;
 namespace Web.Controllers
 {
     //[Authorize]
-    public class ContactTypesController : Controller
+    public class ContactTypesController : BaseController
     {
         //private GymDbContext db = new GymDbContext();
         private readonly IUOW _uow;

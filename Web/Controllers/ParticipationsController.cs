@@ -13,7 +13,7 @@ using Domain;
 
 namespace Web.Controllers
 {
-    public class ParticipationsController : Controller
+    public class ParticipationsController : BaseController
     {
         private readonly IUOW _uow;
 

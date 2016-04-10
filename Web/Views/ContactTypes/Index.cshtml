@@ -25,13 +25,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ContactTypeName.MultiLangStringID)
+            @item.ContactTypeName.MultiLangStringID
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ContactTypeName.Value)
+            @item.ContactTypeName.Translate()
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ContactTypeName.Owner)
+            @item.ContactTypeName.Owner
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ContactTypeID }) |

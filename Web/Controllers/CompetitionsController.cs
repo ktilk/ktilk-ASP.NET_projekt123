@@ -13,7 +13,7 @@ using Domain;
 
 namespace Web.Controllers
 {
-    public class CompetitionsController : Controller
+    public class CompetitionsController : BaseController
     {
         //private GymDbContext db = new GymDbContext();
         private readonly IUOW _uow;
